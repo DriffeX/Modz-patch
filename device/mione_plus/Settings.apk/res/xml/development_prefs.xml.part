@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/development_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/debug_monitoring_category" android:key="debug_monitoring_category">
+        <MultiCheckPreference android:title="@string/enable_traces_title" android:key="enable_traces" android:dialogTitle="@string/enable_traces_dialog_title" />
+    </PreferenceCategory>
+	<PreferenceScreen android:title="@string/cpu_control" android:key="power_usage" android:summary="@string/cpu_control_summary">
+        <intent android:targetPackage="com.lennox.control" android:action="android.intent.action.MAIN" android:targetClass="com.lennox.control.CPUSettings" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/cpu_monitor" android:key="power_usage" android:summary="@string/cpu_monitor_summary">
+        <intent android:targetPackage="com.bvalosek.cpuspy" android:action="android.intent.action.MAIN" android:targetClass="com.bvalosek.cpuspy.ui.HomeActivity" />
+    </PreferenceScreen>
+</PreferenceScreen>
